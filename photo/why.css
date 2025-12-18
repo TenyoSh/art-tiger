@@ -1,0 +1,70 @@
+/* ===== Глобални настройки ===== */
+* { margin:0; padding:0; box-sizing:border-box; font-family:"Poppins",sans-serif; }
+body { scroll-behavior:smooth; background:#f4f4f4; color:#111; }
+
+/* ===== NAVIGATION ===== */
+nav {
+    width:100%; height:80px; display:flex; align-items:center; justify-content:space-between;
+    padding:0 50px; background:#ffffffcc; backdrop-filter:blur(10px);
+    position:sticky; top:0; z-index:100; box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+nav .logo { height:50px; width:auto; }
+nav ul { display:flex; list-style:none; gap:25px; }
+nav ul li a { color:#111; text-decoration:none; font-size:18px; font-weight:500; position:relative; transition:color 0.3s ease; }
+nav ul li a::after { content:""; position:absolute; left:0; bottom:-5px; width:0%; height:2px; background-color:#ff6b6b; transition:width 0.3s ease; }
+nav ul li a:hover::after { width:100%; }
+nav ul li a:hover { color:#ff6b6b; }
+
+/* ===== BURGER MENU ===== */
+.burger { display:none; flex-direction:column; cursor:pointer; gap:5px; }
+.burger div { width:25px; height:3px; background:#111; transition:all 0.3s ease; }
+
+/* ===== HERO ===== */
+.hero { position:relative; width:100%; height:400px; overflow:hidden; }
+.hero-image { width:100%; height:100%; object-fit:cover; filter:brightness(0.7); transition:transform 0.5s ease; }
+.hero:hover .hero-image { transform:scale(1.05); }
+.hero-overlay { position:absolute; top:0; left:0; width:100%; height:100%; }
+.hero-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; color:#fff; }
+.hero-text h1 { font-size:48px; margin-bottom:15px; font-weight:700; text-shadow:2px 2px 8px rgba(0,0,0,0.5); }
+.hero-text p { font-size:22px; text-shadow:1px 1px 6px rgba(0,0,0,0.4); }
+
+/* ===== Services / Sessions Section ===== */
+.services { padding:50px 20px; text-align:center; background:#ffffff; }
+.services h2 { font-size:36px; margin-bottom:40px; color:#111; }
+.services-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+.service { background:#f4f4f4; padding:30px; border-radius:12px; width:250px; transition:all 0.3s ease; }
+.service:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+.service h3 { color:#ff6b6b; font-size:20px; }
+
+/* ===== Cities Section ===== */
+.achievements { padding:50px 20px; text-align:center; background:#f0f0f0; }
+.achievements h2 { font-size:36px; margin-bottom:40px; }
+.achievements-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.achievement { background:#fff; padding:20px 30px; border-radius:12px; min-width:120px; text-align:center; font-weight:500; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s ease; }
+.achievement:hover { transform:translateY(-5px); background:#ff6b6b; color:#fff; }
+
+/* ===== WHY ART TIGERS ===== */
+.why-section { padding:50px 20px; background:#f0f0f0; text-align:center; }
+.why-section h2 { font-size:36px; margin-bottom:40px; color:#111; }
+.why-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px; justify-items:center; }
+.why-item { background:#fff; border-radius:12px; padding:25px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align:center; }
+.why-item img { width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px; transition:transform 0.3s ease; }
+.why-item:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+.why-item h3 { font-size:22px; margin-bottom:10px; color:#ff6b6b; }
+.why-item p { font-size:16px; color:#333; line-height:1.5; }
+
+/* ===== Footer ===== */
+footer { padding:30px 20px; background:#111; text-align:center; color:#ccc; }
+footer .footer-content p { margin-bottom:8px; }
+footer .socials a { margin:0 10px; color:#ff6b6b; text-decoration:none; }
+footer .socials a:hover { color:#fcf15c; }
+
+/* ===== Responsive ===== */
+@media (max-width:768px) {
+    nav ul { position:fixed; top:80px; right:-100%; height:calc(100vh - 80px); width:200px; background:#fff; flex-direction:column; align-items:center; justify-content:flex-start; padding-top:30px; gap:20px; transition:0.3s; box-shadow:-2px 0 15px rgba(0,0,0,0.1);}
+    nav ul.active { right:0; }
+    .burger { display:flex; }
+    .services-grid, .achievements-grid, .why-grid { grid-template-columns:1fr; }
+    .hero-text h1 { font-size:28px; }
+    .hero-text p { font-size:16px; }
+}
