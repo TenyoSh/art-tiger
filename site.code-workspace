@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../site"
+		},
+		{
+			"path": "../sigma"
+		},
+		{
+			"path": "../work"
+		},
+		{
+			"path": "../photo"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sigma"
+	}
+}
