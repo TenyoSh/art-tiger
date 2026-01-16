@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ArtTiger</title>
+
+<link rel="icon" href="twitchtigerlogo.png">
+<link rel="apple-touch-icon" href="twitchtigerlogo.png">
+<link rel="stylesheet" href="why.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="header">
+  <nav>
+    <video
+  class="logo"
+  autoplay
+  loop
+  muted
+  playsinline
+  preload="auto"
+>
+  <source src="Animacion_Logo_Tiger.webm" type="video/webm">
+</video>
+
+    <div class="burger" id="burger" aria-hidden="true">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="start.html">Начало</a></li>
+      <li><a href="uslugi.html">Фото/Видео услуги</a></li>
+      <li><a href="zanas.html">За нас</a></li>
+      <li><a href="why.html">Защо ArtTiger</a></li>
+      <li><a href="ENstart.html">EN</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <img src="siuuuu.jpg" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Защо да изберете ArtTiger</h1>
+      <p>Професионални фотосесии и видеозаснемане</p>
+    </div>
+  </div>
+</header>
+
+<!-- ===== WHY ART TIGER ===== -->
+<section class="why-simple">
+  <div class="why-row">
+    <div class="why-text">
+      <h2>Защо да се доверите на нашия екип?</h2>
+      <p>
+        ArtTiger е екип, който вярва, че добрата снимка или анимация
+        не е просто кадър, а емоция, история и усещане.
+      </p>
+      <p>
+        Използваме професионална техника, модерна визия и креативно мислене,
+        за да създаваме съдържание, което изпъква.
+      </p>
+    </div>
+
+    <div class="hora">
+      <img src="horanamore.jpg" alt="ArtTiger Photography">
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews">
+  <div class="reviews-container">
+
+    <h2>Какво казват нашите клиенти</h2>
+
+    <!-- Fake Review 1 -->
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">
+        Страхотно отношение и невероятни снимки!
+      </p>
+      <span class="review-author">– Мария П.</span>
+    </div>
+
+    <!-- Fake Review 2 -->
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">
+        Много креативен екип и отлична аниматорска дейност!
+      </p>
+      <span class="review-author">– Иван К.</span>
+    </div>
+
+    <!-- NEW REVIEWS -->
+    <div id="newReviews"></div>
+
+    <!-- Review Form -->
+    <div class="review-form">
+      <h3>Остави своето мнение</h3>
+
+      <form id="reviewForm">
+
+        <input 
+          type="text" 
+          id="reviewName" 
+          placeholder="Вашето име:"
+        >
+
+        <div class="rating">
+          <input type="radio" name="star" id="star5" value="5">
+          <label for="star5">★</label>
+
+          <input type="radio" name="star" id="star4" value="4">
+          <label for="star4">★</label>
+
+          <input type="radio" name="star" id="star3" value="3">
+          <label for="star3">★</label>
+
+          <input type="radio" name="star" id="star2" value="2">
+          <label for="star2">★</label>
+
+          <input type="radio" name="star" id="star1" value="1">
+          <label for="star1">★</label>
+        </div>
+
+        <textarea 
+          id="reviewText" 
+          placeholder="Напиши своя коментар..." 
+          required
+        ></textarea>
+
+        <button type="submit">Изпрати</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / About -->
+    <div class="footer-section">
+      <h2 class="footer-logo">Art-Tiger</h2>
+      <p>
+        
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-section">
+      <h3>Навигация</h3>
+      <ul>
+        <li><a href="start.html">Начало</a></li>
+        <li><a href="uslugi.html">Фото/Видео услуги</a></li>
+        <li><a href="zanas.html">За нас</a></li>
+        <li><a href="why.html">Защо Art Tiger</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h3>Контакти</h3>
+      <p>📍 София, България</p>
+      <p>📞 +359 88 7090 160</p>
+      <p>✉️ denislav3e1@gmail.com</p>
+    </div>
+
+    <!-- Social -->
+   <div class="social-icons">
+  <a href="#" class="facebook" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href="#" class="instagram" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="#" class="tiktok" aria-label="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+
+
+  </div>
+
+  
+</footer>
+
+
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
+<script>
+document.getElementById("reviewForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nameInput = document.getElementById("reviewName").value.trim();
+  const name = nameInput !== "" ? nameInput : "Анонимен клиент";
+
+  const text = document.getElementById("reviewText").value;
+  const stars = document.querySelector('input[name="star"]:checked');
+
+  if (!stars) {
+    alert("Моля, избери звезди ⭐");
+    return;
+  }
+
+  const value = stars.value;
+  let starsHTML = "";
+
+  for (let i = 0; i < value; i++) starsHTML += "★";
+  for (let i = value; i < 5; i++) starsHTML += "☆";
+
+  const review = `
+    <div class="review-card">
+      <div class="stars">${starsHTML}</div>
+      <p class="review-text">${text}</p>
+      <span class="review-author">– ${name}</span>
+    </div>
+  `;
+
+  document.getElementById("newReviews").innerHTML += review;
+  this.reset();
+});
+</script>
+
+</body>
+</html>

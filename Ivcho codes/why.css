@@ -1,0 +1,786 @@
+/* ===== Глобални настройки ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #111;
+}
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(161, 10, 121, 0.95),
+    rgba(90, 45, 134, 0.95)
+  );
+  backdrop-filter: blur(16px);
+
+  position: sticky;
+  top: 0;
+  z-index: 200;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   LOGO – WEBM VIDEO
+========================= */
+
+nav .logo {
+  height: 100px;
+  max-height: 115px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 10;
+
+  animation:
+    logoFloat 6s ease-in-out infinite,
+    logoGlow 4.5s ease-in-out infinite;
+
+  filter:
+    drop-shadow(0 0 14px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 26px rgba(144, 247, 241, 0.9));
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+/* махаме контроли */
+.logo::-webkit-media-controls {
+  display: none !important;
+}
+
+/* hover */
+nav .logo:hover {
+  animation-play-state: paused;
+  transform: scale(1.12);
+  filter:
+    drop-shadow(0 0 20px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 0 38px rgba(144, 247, 241, 1));
+}
+
+/* =========================
+   LOGO ANIMATIONS
+========================= */
+
+@keyframes logoFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes logoGlow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(144, 247, 241, 0.45));
+  }
+  50% {
+    filter: drop-shadow(0 0 34px rgba(144, 247, 241, 1));
+  }
+  100% {
+    filter: drop-shadow(0 0 10px rgba(144, 247, 241, 0.45));
+  }
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 34px;
+  align-items: center;
+  margin-left: auto;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16.5px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+  padding: 6px 0;
+  position: relative;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    text-shadow 0.25s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #90f7f1,
+    #c77dff
+  );
+  border-radius: 4px;
+  transform: translateX(-50%);
+  transition: width 0.35s cubic-bezier(.3,.9,.3,1);
+  box-shadow: 0 0 12px rgba(144, 247, 241, 0.8);
+}
+
+nav ul li a:hover::after {
+  width: 115%;
+}
+
+/* ===== BURGER ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: auto;
+}
+.burger div {
+  width: 26px;
+  height: 3px;
+  background: #fff;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 480px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 72px;
+}
+
+/* ===== WHY SIMPLE (обновена версия) ===== */
+.why-simple {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f4f1ff, #e7a005);
+}
+
+.why-row {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.why-text {
+  flex: 1;
+}
+
+.why-text h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  position: relative;
+  color: #6e0d86;
+}
+
+.why-text h2::after {
+  content:"";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #ff6b6b;
+  border-radius: 2px;
+}
+
+.why-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.hora {
+  border-radius: 20px; /* заоблени ъгли */
+  overflow: hidden;    /* задължително */
+  width: 100%;         /* за да запълни колоната */
+  max-width: 600px;    /* по желание, за да не е твърде голяма */
+}
+
+.hora img {
+  width: 100%;
+  height: auto;       /* запазва пропорциите на снимката */
+  display: block;     /* премахва нежелани gaps */
+  object-fit: cover;  /* кадрира изображението добре */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hora img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #111;
+  color: #eee;
+  padding: 60px 20px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+/* === SOCIAL ICONS === */
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Facebook */
+.social-icons a.facebook {
+  background-color: #1877f2;
+}
+
+/* Instagram */
+.social-icons a.instagram {
+  background: radial-gradient(circle at 30% 30%,
+    #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+/* TikTok */
+.social-icons a.tiktok {
+  background-color: #010101;
+}
+
+.social-icons a:hover,
+.social-icons a:active {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.footer-bottom {
+  width: 100%;
+  border-top: 1px solid #333;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin-top: 40px;
+}
+.footer-section {
+  position: relative;
+  padding-right: 20px;
+}
+
+/* Жълта вертикална линия */
+.footer-section::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 2px;
+  height: 70%;
+  background-color: #f5c400; /* жълт акцент */
+  opacity: 0.9;
+}
+
+/* Премахваме линията от последната колона */
+.footer-section:last-child::after {
+  display: none;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .burger { display: flex; }
+
+  nav ul {
+    display: none;
+  }
+
+  .why-row {
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+}
+/* ===== REVIEWS ===== */
+.reviews {
+  padding: 100px 20px;
+  background: linear-gradient(62deg, #f4f1ff, #e7a005);
+}
+
+.reviews-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #6e0d86;
+}
+
+.review-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.stars {
+  font-size: 24px;
+  color: #ffb703;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.review-author {
+  font-size: 15px;
+  color: #666;
+}
+
+/* ===== REVIEW FORM ===== */
+.review-form {
+  margin-top: 70px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.review-form h3 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #6e0d86;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 32px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffb703;
+}
+
+.review-form textarea {
+  width: 100%;
+  min-height: 120px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 14px;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.review-form button {
+  background: #6e0d86;
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.review-form button:hover {
+  background: #4f0a63;
+}
+.review-form input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* ===== BURGER MENU ===== */
+.burger { display: none; flex-direction: column; gap:6px; cursor: pointer; padding: 6px; }
+.burger div { width: 26px; height: 3px; background: #111; border-radius: 2px; transition: all 0.25s ease; }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 480px; /* по-малка снимка както поиска */
+  overflow: hidden;
+  display: block;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  -webkit-user-drag: none;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.35); /* тъмняне за четливост */
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  padding: 0 20px;
+}
+.hero-text h1 { font-size: 84px; margin-bottom: 12px; font-weight: 700; line-height: 1.02; text-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+.hero-text p { font-size: 38px; text-shadow: 0 4px 12px rgba(0,0,0,0.35); }
+
+/* ===== Services ===== */
+.services { 
+    border:0px solid rgb(255, 255, 255);
+  padding: 56px 18px;
+  text-align: left;
+  background: #8e83ac;
+}
+
+.services h2 { 
+  border:0px solid rgb(255, 0, 0);
+  font-size: 40px; 
+  margin-bottom: 60px; 
+  color: #ffffff; 
+  border-bottom: 7px solid #ffffff; /* бяла линия, дебела 5mm */
+  display: inline-block; /* за да е с дължина на текста, а не цялата ширина */
+  padding-bottom: 8px; /* малко разстояние между текста и линията */
+}
+.services { border:0px solid rgb(255, 255, 255); 
+  padding: 56px 18px; 
+  text-align: center; 
+  background: #6e0d86; 
+
+} 
+.services h2 { 
+  border:0px solid rgb(255, 0, 0); 
+  font-size: 40px; 
+  margin-bottom: 60px; 
+  color: #ffffff; 
+   border-bottom: 8px solid #ffffff; /* бяла линия, дебела 5mm */
+  display: inline-block; /* за да е с дължина на текста, а не цялата ширина */
+  padding-bottom: 8px; /* малко разстояние между текста и линията */
+}
+
+.services h3{ 
+  border:0px solid rgb(255, 0, 0); 
+  font-size: 25px; 
+  margin-bottom: 60px; 
+  color: #000000; 
+  
+
+}
+.services p { 
+  border:0px solid rgb(255, 0, 0); 
+  font-size: 20px; 
+  margin-bottom: 60px; 
+  color: #000000; 
+   
+}
+
+ .services-grid { 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 24px; 
+}
+ .service {
+   background: #ffffff; 
+   padding: 26px; 
+   border-radius: 12px; 
+   width: 400px; 
+   transition: transform 0.22s ease, box-shadow 0.22s ease; 
+   overflow: hidden; /* добавено за снимката */ 
+  }
+   .service img { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+    border-top-left-radius: 12px; 
+    border-top-right-radius: 12px; 
+  }
+   .service:hover { 
+    transform: translateY(-6px); 
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08); 
+    background-color: #d83838; /* оригиналния цвят */ 
+    color: #ffffff; 
+    animation: serviceBgFade 2.5s infinite alternate; 
+  } 
+  .service-btn { 
+    background: transparent; 
+    border: 2px solid #000; 
+    padding: 10px 22px; 
+    margin-top: 15px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+  }
+   .service-btn a { 
+    text-decoration: none; 
+    color: #000; 
+    font-weight: 600; 
+    letter-spacing: 0.5px; 
+  } 
+    .service-btn:hover { 
+      background: #000; 
+    } 
+    .service-btn:hover a { 
+      color: #fff; 
+    } 
+    /* Fade анимация за background-а */ 
+    @keyframes serviceBgFade { 0% { 
+      background-color: #62e6e6; 
+    } 
+    50% { 
+      background-color: #62e6e6; 
+    } 
+    100% { 
+      background-color: #62e6e6; 
+    } 
+  } 
+  .service h3 { 
+    margin-bottom: 50px;
+  }
+
+
+/* ===== WHY ART TIGERS ===== */
+.why-section { padding:50px 20px; background:#c4afff; text-align:center; }
+.why-section h2 { font-size:36px; margin-bottom:40px; color:#ffffff;
+ border-bottom: 7px solid #ffffff; /* бяла линия, дебела 5mm */
+  display: inline-block; /* за да е с дължина на текста, а не цялата ширина */
+  padding-bottom: 8px; /* малко разстояние между текста и линията */ }
+.why-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px; justify-items:center; }
+.why-item { background:#fff; border-radius:12px; padding:25px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align:center; }
+.why-item img { width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px; transition:transform 0.3s ease; }
+.why-item:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+.why-item h3 { font-size:22px; margin-bottom:10px; color:#ff6b6b; }
+.why-item p { font-size:16px; color:#333; line-height:1.5; }
+
+/* ===== Footer ===== */
+footer {
+  padding: 28px 18px;
+  background: #111;
+  text-align: left;
+  color: #d1d1d1;
+}
+footer .footer-content p { margin-bottom: 7px; }
+footer .socials a { margin: 0 8px; color: #ff6b6b; text-decoration: none; }
+footer .socials a:hover { color: #fff; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .hero-text h1 { font-size: 36px; }
+  .hero { height: 420px; }
+}
+@media (max-width: 768px) {
+  .burger { display: flex; }
+  nav ul { position: fixed; top: 80px; right: -100%; height: calc(100vh - 80px); width: 220px; background: #fff; flex-direction: column; align-items: center; padding-top: 24px; gap: 18px; transition: right 0.28s ease; z-index: 300; box-shadow: -6px 0 22px rgba(0,0,0,0.08); }
+  nav ul.active { right: 0; }
+  nav ul li a { color: #111; }
+  .hero { height: 520px; }
+  .selection-section { bottom: 22px; gap: 12px; padding: 0 8px; }
+  .selection-field select { min-width: 160px; }
+}
+@media (max-width: 420px) {
+  .hero { height: 440px; }
+  .hero-text h1 { font-size: 28px; }
+  .selection-section { flex-direction: column; align-items: center; gap: 10px; left: 50%; transform: translateX(-50%); bottom: 18px; }
+  .selection-field select { min-width: 200px; width: 100%; max-width: 320px; }
+  .btn { width: 100%; max-width: 320px; }
+}
+.services-parts {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.services-parts h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service-part {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  border-left: 3px solid #f5a623;
+}
+
+.service-part h3 {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.service-part p {
+  margin: 0;
+  line-height: 1.6;
+}
+/* ===== Services Parts – NEW ===== */
+.services-parts {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.services-parts h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 42px;
+}
+
+.service-part {
+  margin-bottom: 60px;
+  padding-left: 30px;
+  border-left: 4px solid #f5a623;
+}
+
+.service-part h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.service-part p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0;
+}

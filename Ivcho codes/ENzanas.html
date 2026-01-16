@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtTiger</title>
+
+    <link rel="icon" href="twitchtigerlogo.png">
+    <link rel="apple-touch-icon" href="twitchtigerlogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="zanas.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER / NAVIGATION ===== -->
+<header class="header">
+    <nav class="navigation">
+        <img src="twitchtigerlogo.png" alt="ArtTiger Logo" class="logo">
+
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="ENstart.html">Home</a></li>
+            <li><a href="ENuslugi.html">Photo / Video Services</a></li>
+            <li><a href="ENzanas.html">About Us</a></li>
+            <li><a href="ENwhy.html">Why ArtTiger</a></li>
+            <li><a href="start.html">BG</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <img src="siuuuu.jpg" alt="Hero background" class="hero-image">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-text">
+            <h1>About Me</h1>
+            <p>A little more information about me!</p>
+        </div>
+    </section>
+</header>
+
+<!-- ===== PROFILE SECTION ===== -->
+<section class="profile-section">
+    <div class="profile-container">
+
+        <div class="profile-image">
+            <img src="portretdeni.jpg" alt="Photographer">
+        </div>
+
+        <div class="profile-info">
+            <h1>Denislav Mihalev</h1>
+            <h2>Professional Actor</h2>
+
+            <p>
+           I completed my secondary education at NUMSI "Hristina Morfova" with a specialization in Acting. In 2025, I graduated from NATFIZ "Krastyo Sarafov" with a degree in Acting for Dramatic Theatre, in the class of Prof. Plamen Markov. I currently work as an actor at the Stefan Kirov Drama Theatre in Sliven.
+
+I have participated in numerous theatrical productions, including diploma performances at NATFIZ, productions at the Youth Theatre Studio "Scene 99," and musicals at the State Opera Stara Zagora.
+
+In addition to my acting career, I have a strong desire to develop as a professional photographer, combining my artistic experience with a creative vision in the field of visual arts.
+            </p>
+
+            <ul class="profile-details">
+                <li><strong>Location:</strong> Sofia, Bulgaria</li>
+                <li><strong>Email:</strong> denislav3e1@gmail.com</li>
+                <li><strong>Phone:</strong> +359 88 7090 160</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-section">
+  <div class="contact-wrapper">
+
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="contact-subtitle">
+      Tell us about your project. We will respond within 24 hours.
+    </p>
+
+    <form id="contactForm" class="contact-form-clean">
+
+      <!-- First / Last Name -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" name="first_name" required>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" name="last_name" required>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <!-- Country + Phone -->
+      <div class="form-row">
+        <div class="form-group small">
+          <label>Country</label>
+          <select id="country" name="country" required>
+            <option value="+359">Bulgaria (+359)</option>
+            <option value="+49">Germany (+49)</option>
+            <option value="+44">United Kingdom (+44)</option>
+            <option value="+33">France (+33)</option>
+            <option value="+1">USA (+1)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </div>
+
+      <!-- Date -->
+      <div class="form-group">
+        <label>Event Date</label>
+        <input type="date" name="event_date" required>
+      </div>
+
+      <!-- Budget -->
+      <div class="form-group">
+        <label>Budget</label>
+        <select name="budget" required>
+          <option value="">Select budget</option>
+          <option>100+ BGN</option>
+          <option>300+ BGN</option>
+          <option>500+ BGN</option>
+          <option>1000+ BGN</option>
+        </select>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+      </div>
+
+      <!-- GDPR -->
+      <div class="gdpr">
+        <input type="checkbox" id="gdpr" name="gdpr" required>
+        <label for="gdpr">
+          I agree that my personal data may be used for contact purposes.
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Inquiry</button>
+
+      <p id="formStatus" class="form-status"></p>
+
+    </form>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / About -->
+    <div class="footer-section">
+      <h2 class="footer-logo">Art-Tiger</h2>
+      <p>
+        
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-section">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="ENstart.html">Home</a></li>
+        <li><a href="ENuslugi.html">Photo/Video services</a></li>
+        <li><a href="ENzanas.html">About us</a></li>
+        <li><a href="ENwhy.html">Why Art Tiger</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h3>Contacts</h3>
+      <p>📍 Sofia,Bulgaria</p>
+      <p>📞  +359 88 709 0160</p>
+      <p>✉️ denislav3e1@gmail.com</p>
+    </div>
+
+    <!-- Social -->
+   <div class="social-icons">
+  <a href="#" class="facebook" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href="#" class="instagram" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="#" class="tiktok" aria-label="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+
+
+  </div>
+
+</footer>
+
+<script>
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
+
+    burger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("Q_dStnUDYuSI42d2w");
+})();
+
+const countrySelect = document.getElementById("country");
+const phoneInput = document.getElementById("phone");
+
+countrySelect.addEventListener("change", () => {
+  phoneInput.value = countrySelect.value + " ";
+});
+
+const form = document.getElementById("contactForm");
+const statusMsg = document.getElementById("formStatus");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_t5iybay",
+    "template_c2hswsf",
+    this
+  ).then(() => {
+      statusMsg.textContent = "Your message was sent successfully!";
+      statusMsg.className = "form-status success";
+      form.reset();
+  }).catch((error) => {
+      console.error("EmailJS error:", error);
+      statusMsg.textContent = "Error sending message. Please check the console.";
+      statusMsg.className = "form-status error";
+  });
+});
+</script>
+
+</body>
+</html>

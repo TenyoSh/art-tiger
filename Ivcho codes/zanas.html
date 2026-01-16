@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtTiger</title>
+
+    <link rel="icon" href="twitchtigerlogo.png">
+    <link rel="apple-touch-icon" href="twitchtigerlogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="zanas.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER / NAVIGATION ===== -->
+<header class="header">
+  <nav>
+    <video
+  class="logo"
+  autoplay
+  loop
+  muted
+  playsinline
+  preload="auto"
+>
+  <source src="Animacion_Logo_Tiger.webm" type="video/webm">
+</video>
+
+    <div class="burger" id="burger" aria-hidden="true">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="start.html">Начало</a></li>
+      <li><a href="uslugi.html">Фото/Видео услуги</a></li>
+      <li><a href="zanas.html">За нас</a></li>
+      <li><a href="why.html">Защо ArtTiger</a></li>
+      <li><a href="ENstart.html">EN</a></li>
+    </ul>
+  </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <img src="siuuuu.jpg" alt="Hero background" class="hero-image">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-text">
+            <h1>За нас </h1>
+            <p>Малко повече информация относно мен !</p>
+        </div>
+    </section>
+</header>
+
+<!-- ===== PROFILE SECTION ===== -->
+<section class="profile-section">
+    <div class="profile-container">
+
+        <div class="profile-image">
+            <img src="portretdeni.jpg" alt="Фотограф">
+        </div>
+
+        <div class="profile-info">
+            <h1>Денислав Михалев</h1>
+            <h2>Професионален Актьор</h2>
+
+            <p>
+            Завършил съм средното си образование в НУМСИ "Христина Морфова" със специалност "Актьорско майсторство". През 2025 г. завърших НАТФИЗ "Кръстьо Сарафов" със специалност "Актьорство за драматичен театър" в класа на проф. Пламен Марков. В момента работя като актьор в Драматичен театър "Стефан Киров" – Сливен.
+
+Имам участия в множество театрални представления, включително дипломни постановки в НАТФИЗ, спектакли в Младежка театрална студия "Сцена 99" и мюзикъли в Държавна опера Стара Загора.
+
+Освен актьорската си кариера, имам силно желание да се развивам и като професионален фотограф, съчетавайки артистичния си опит с творческо виждане в областта на визуалното изкуство.
+            </p>
+
+            <ul class="profile-details">
+                <li><strong>Локация:</strong> София, България</li>
+                <li><strong>Имейл:</strong> denislav3e1@gmail.com</li>
+                <li><strong>Телефон:</strong> +359 88 7090 160</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-section">
+  <div class="contact-wrapper">
+
+    <h2 class="contact-title">Свържи се с нас</h2>
+    <p class="contact-subtitle">
+      Разкажи ни за проекта си. Ще отговорим в рамките на 24 часа.
+    </p>
+
+    <form id="contactForm" class="contact-form-clean">
+
+      <!-- Име / Фамилия -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>Име</label>
+          <input type="text" name="first_name" required>
+        </div>
+        <div class="form-group">
+          <label>Фамилия</label>
+          <input type="text" name="last_name" required>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>Имейл</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <!-- Държава + Телефон -->
+      <div class="form-row">
+        <div class="form-group small">
+          <label>Държава</label>
+          <select id="country" name="country" required>
+            <option value="+359">България (+359)</option>
+            <option value="+49">Германия (+49)</option>
+            <option value="+44">Великобритания (+44)</option>
+            <option value="+33">Франция (+33)</option>
+            <option value="+1">САЩ (+1)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Телефон</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </div>
+
+      <!-- Дата -->
+      <div class="form-group">
+        <label>Дата на събитието</label>
+        <input type="date" name="event_date" required>
+      </div>
+
+      <!-- Бюджет -->
+      <div class="form-group">
+        <label>Бюджет</label>
+        <select name="budget" required>
+          <option value="">Избери бюджет</option>
+          <option>100+ лв</option>
+          <option>300+ лв</option>
+          <option>500+ лв</option>
+          <option>1000+ лв</option>
+        </select>
+      </div>
+
+      <!-- Съобщение -->
+      <div class="form-group">
+        <label>Съобщение</label>
+        <textarea name="message" required></textarea>
+      </div>
+
+      <!-- GDPR -->
+      <div class="gdpr">
+        <input type="checkbox" id="gdpr" name="gdpr" required>
+        <label for="gdpr">
+          Съгласен съм личните ми данни да бъдат използвани за контакт.
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Изпрати запитване</button>
+
+      <p id="formStatus" class="form-status"></p>
+
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / About -->
+    <div class="footer-section">
+      <h2 class="footer-logo">Art-Tiger</h2>
+      <p>
+        
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-section">
+      <h3>Навигация</h3>
+      <ul>
+        <li><a href="start.html">Начало</a></li>
+        <li><a href="uslugi.html">Фото/Видео услуги</a></li>
+        <li><a href="zanas.html">За нас</a></li>
+        <li><a href="why.html">Защо Art Tiger</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h3>Контакти</h3>
+      <p>📍 София, България</p>
+      <p>📞 +359 88 7090 160</p>
+      <p>✉️ denislav3e1@gmail.com</p>
+    </div>
+
+    <!-- Social -->
+   <div class="social-icons">
+  <a href="#" class="facebook" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href="#" class="instagram" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="#" class="tiktok" aria-label="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+
+
+  </div>
+
+</footer>
+
+<script>
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
+
+    burger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("Q_dStnUDYuSI42d2w");
+})();
+
+const countrySelect = document.getElementById("country");
+const phoneInput = document.getElementById("phone");
+
+countrySelect.addEventListener("change", () => {
+  phoneInput.value = countrySelect.value + " ";
+});
+
+const form = document.getElementById("contactForm");
+const statusMsg = document.getElementById("formStatus");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_t5iybay",
+    "template_c2hswsf",
+    this
+  ).then(() => {
+      statusMsg.textContent = "Съобщението беше изпратено успешно!";
+      statusMsg.className = "form-status success";
+      form.reset();
+  }).catch((error) => {
+      console.error("EmailJS error:", error);
+      statusMsg.textContent = "Грешка при изпращане. Провери конзолата.";
+      statusMsg.className = "form-status error";
+  });
+});
+</script>
+
+
+</body>
+</html>

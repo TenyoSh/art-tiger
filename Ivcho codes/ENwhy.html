@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ArtTiger</title>
+
+<link rel="icon" href="twitchtigerlogo.png">
+<link rel="apple-touch-icon" href="twitchtigerlogo.png">
+<link rel="stylesheet" href="why.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="header">
+  <nav>
+    <img src="twitchtigerlogo.png" alt="Logo" class="logo" />
+    <div class="burger" id="burger">
+      <div></div><div></div><div></div>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="ENstart.html">Home</a></li>
+      <li><a href="ENuslugi.html">Photo/Video Services</a></li>
+      <li><a href="ENzanas.html">About Us</a></li>
+      <li><a href="ENwhy.html">Why ArtTiger</a></li>
+      <li><a href="start.html">BG</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <img src="siuuuu.jpg" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Why Choose ArtTiger</h1>
+      <p>Professional photoshoots and video production</p>
+    </div>
+  </div>
+</header>
+
+<!-- ===== WHY ART TIGER ===== -->
+<section class="why-simple">
+  <div class="why-row">
+    <div class="why-text">
+      <h2>Why trust our team?</h2>
+      <p>
+        ArtTiger is a team that believes a great photo or animation
+        is not just an image, but an emotion, a story, and a feeling.
+      </p>
+      <p>
+        We use professional equipment, modern visual style, and creative thinking
+        to create content that truly stands out.
+      </p>
+    </div>
+
+    <div class="hora">
+      <img src="horanamore.jpg" alt="ArtTiger Photography">
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews">
+  <div class="reviews-container">
+
+    <h2>What our clients say</h2>
+
+    <!-- Fake Review 1 -->
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">
+        Amazing attitude and incredible photos!
+      </p>
+      <span class="review-author">– Maria P.</span>
+    </div>
+
+    <!-- Fake Review 2 -->
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">
+        Very creative team and excellent animation services!
+      </p>
+      <span class="review-author">– Ivan K.</span>
+    </div>
+
+    <!-- NEW REVIEWS -->
+    <div id="newReviews"></div>
+
+    <!-- Review Form -->
+    <div class="review-form">
+      <h3>Leave your review</h3>
+
+      <form id="reviewForm">
+
+        <input 
+          type="text" 
+          id="reviewName" 
+          placeholder="Your name:"
+        >
+
+        <div class="rating">
+          <input type="radio" name="star" id="star5" value="5">
+          <label for="star5">★</label>
+
+          <input type="radio" name="star" id="star4" value="4">
+          <label for="star4">★</label>
+
+          <input type="radio" name="star" id="star3" value="3">
+          <label for="star3">★</label>
+
+          <input type="radio" name="star" id="star2" value="2">
+          <label for="star2">★</label>
+
+          <input type="radio" name="star" id="star1" value="1">
+          <label for="star1">★</label>
+        </div>
+
+        <textarea 
+          id="reviewText" 
+          placeholder="Write your comment..." 
+          required
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h2 class="footer-logo">Art-Tiger</h2>
+      <p></p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="ENstart.html">Home</a></li>
+        <li><a href="ENuslugi.html">Photo/Video Services</a></li>
+        <li><a href="ENzanas.html">About Us</a></li>
+        <li><a href="ENwhy.html">Why Art Tiger</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contacts</h3>
+      <p>📍 Sofia,Bulgaria</p>
+      <p>📞 +359 88 709 0160</p>
+      <p>✉️ denislav3e1@gmail.com</p>
+    </div>
+
+    <div class="social-icons">
+      <a href="#" class="facebook" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="#" class="instagram" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="#" class="tiktok" aria-label="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
+<script>
+document.getElementById("reviewForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nameInput = document.getElementById("reviewName").value.trim();
+  const name = nameInput !== "" ? nameInput : "Anonymous client";
+
+  const text = document.getElementById("reviewText").value;
+  const stars = document.querySelector('input[name="star"]:checked');
+
+  if (!stars) {
+    alert("Please select a star rating ⭐");
+    return;
+  }
+
+  const value = stars.value;
+  let starsHTML = "";
+
+  for (let i = 0; i < value; i++) starsHTML += "★";
+  for (let i = value; i < 5; i++) starsHTML += "☆";
+
+  const review = `
+    <div class="review-card">
+      <div class="stars">${starsHTML}</div>
+      <p class="review-text">${text}</p>
+      <span class="review-author">– ${name}</span>
+    </div>
+  `;
+
+  document.getElementById("newReviews").innerHTML += review;
+  this.reset();
+});
+</script>
+
+</body>
+</html>
